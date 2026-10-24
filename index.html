@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>5 букв</title>
+  <meta name="description" content="Угадай слово из пяти букв за шесть попыток. Слово дня и свободная игра.">
+  <meta name="theme-color" content="#120d1f">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <button class="icon-btn" data-open="help" aria-label="Правила">?</button>
+    <h1 class="logo">5 БУКВ</h1>
+    <button class="icon-btn" data-open="stats" aria-label="Статистика">📊</button>
+  </header>
+
+  <div class="modes" role="tablist">
+    <button class="mode is-active" data-mode="daily">Слово дня</button>
+    <button class="mode" data-mode="free">Свободная игра</button>
+  </div>
+
+  <main class="board" id="board" aria-label="Игровое поле"></main>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <div class="keyboard" id="keyboard" aria-label="Клавиатура"></div>
+
+  <div class="modal" id="help" hidden>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Закрыть">✕</button>
+      <h2>Как играть</h2>
+      <p>Угадайте слово из 5 букв за 6 попыток. После каждой попытки буквы подсвечиваются:</p>
+      <div class="example">
+        <span class="tile s-correct">К</span><span class="tile">Н</span><span class="tile s-present">И</span><span class="tile">Г</span><span class="tile s-absent">А</span>
+      </div>
+      <ul>
+        <li><b class="c-correct">Зелёная</b> — буква на своём месте.</li>
+        <li><b class="c-present">Жёлтая</b> — буква есть в слове, но в другом месте.</li>
+        <li><b class="c-absent">Серая</b> — такой буквы нет.</li>
+      </ul>
+      <p>«Слово дня» одно для всех и меняется в полночь. В «Свободной игре» слова бесконечные. Буква Ё считается как Е.</p>
+      <p class="muted">На ПК можно печатать с клавиатуры — даже в английской раскладке.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="stats" hidden>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Закрыть">✕</button>
+      <h2>Статистика</h2>
+      <div class="stat-row" id="statRow"></div>
+      <h3>Распределение попыток</h3>
+      <div class="dist" id="dist"></div>
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
