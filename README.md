@@ -2,7 +2,7 @@
 
 **Словесная головоломка: угадай слово из пяти букв за шесть попыток.**
 
-### ▶️ [Играть](https://mmmaksmog-commits.github.io/five-letters/)
+### ▶️ [Играть](https://mysik-portfolio.vercel.app/five-letters/)
 
 Работает на телефоне и на ПК, без установки и регистрации.
 
@@ -31,4 +31,4 @@ python3 -m http.server 8000
 
 ---
 
-Часть [портфолио](https://mmmaksmog-commits.github.io/).
+Часть [портфолио](https://mysik-portfolio.vercel.app/).
